@@ -3,7 +3,7 @@ import {
     CardFooter,
     CardContent,
     CardHeader
-    } from "../card";
+    } from "../ui/card";
 import { BackButton } from "./back-button";
 import { HeaderComponent } from "./header";
 import { Social } from "./social";
