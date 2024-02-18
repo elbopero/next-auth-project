@@ -66,6 +66,24 @@ export const RegisterForm = () => {
                 className="space-y-6"
                 >
                     <div className="space-y-4">
+                    <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Name</FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            {...field}
+                                            placeholder="John Doe"
+                                            type="name"
+                                            disabled={isPending}
+                                        />
+                                    </FormControl>
+                                    <FormMessage/>
+                                </FormItem>    
+                            )}
+                        />
                         <FormField
                             control={form.control}
                             name="email"
@@ -102,24 +120,7 @@ export const RegisterForm = () => {
                                 </FormItem>    
                             )}
                         />
-                        <FormField
-                            control={form.control}
-                            name="name"
-                            render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel>Name</FormLabel>
-                                    <FormControl>
-                                        <Input
-                                            {...field}
-                                            placeholder="John Doe"
-                                            type="name"
-                                            disabled={isPending}
-                                        />
-                                    </FormControl>
-                                    <FormMessage/>
-                                </FormItem>    
-                            )}
-                        />
+                        
 
                     
                     </div>
